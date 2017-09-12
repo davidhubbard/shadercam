@@ -1,12 +1,10 @@
 package com.androidexperiments.shadercam.fragments;
 
-import android.content.pm.PackageManager;
-import android.content.pm.PermissionInfo;
-import android.os.Build;
-import android.support.annotation.NonNull;
 import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentActivity;
+import android.content.pm.PackageManager;
+import android.os.Build;
 import android.util.Log;
 
 import java.util.ArrayList;
@@ -63,7 +61,7 @@ public class PermissionsHelper extends Fragment {
     }
 
     @Override
-    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
+    public void onRequestPermissionsResult(int requestCode, String[] permissions, int[] grantResults) {
         Log.d(TAG, "onRequestPermissionsResult() " + Arrays.toString(permissions) + Arrays.toString(grantResults));
 
         if(requestCode == PERMISSION_REQUEST_CODE && getParent() != null) {

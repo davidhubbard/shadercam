@@ -3,6 +3,8 @@ package com.androidexperiments.shadercam.fragments;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.Dialog;
+import android.support.v4.app.DialogFragment;
+import android.support.v4.app.Fragment;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.graphics.Matrix;
@@ -21,9 +23,6 @@ import android.media.MediaRecorder;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.HandlerThread;
-import android.support.annotation.NonNull;
-import android.support.v4.app.DialogFragment;
-import android.support.v4.app.Fragment;
 import android.util.Log;
 import android.util.Size;
 import android.view.Surface;
@@ -596,7 +595,6 @@ public class CameraFragment extends Fragment {
     public static class ErrorDialog extends DialogFragment {
 
         @Override
-        @NonNull
         public Dialog onCreateDialog(Bundle savedInstanceState) {
             final Activity activity = getActivity();
             return new AlertDialog.Builder(activity)
